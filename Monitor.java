@@ -16,7 +16,7 @@ public class ProductorConsumidor {
    }
   }
   private int producir_elemento() {
-   ...
+   //...
   } // realmente produce
  }
  static class consumidor extends Thread {
@@ -28,7 +28,7 @@ public class ProductorConsumidor {
    }
   }
   private void consumir_elemento(int elemento) {
-   ...
+   //...
   } // realmente consume
  }
  static class nuestro_monitor { // este es un monitor
@@ -47,7 +47,7 @@ public class ProductorConsumidor {
    val = bufer[inf]; // obtiene un elemento del búfer
    lo = (lo + 1) % N; // ranura en la que se va a colocar el siguiente elemento
    cuenta = cuenta - 1; // un elemento menos en el búfer
-   if (cuenta == N 1) notify(); // si el productor estaba inactivo, lo despierta
+   if (cuenta == N%1) notify(); // si el productor estaba inactivo, lo despierta
    return val;
   }
   private void ir_a_estado_inactivo() {
